@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Changed the title from "Document" to "Note Taking Application" for better description -->
+    <title>Note Taking Application</title>
+</head>
+<body>
+    <!-- Updated the form action to "/", which matches the route defined in the Flask application -->
+    <!-- Also added method="post" to specify that this form should send a POST request -->
+    <form action="/" method="post">
+        <input type="text" name="note" placeholder="Enter a note">
+        <!-- Added type="submit" to the button to specify that it should submit the form -->
+        <button type="submit">Add Note</button>
+    </form>
+
+    <!-- This part of the code displays the notes as an unordered list -->
+    <!-- It was already correct in the previous code -->
+    <ul>
+    {% for note in notes %}
+        <li>{{ note }}</li>
+    {% endfor %}
+    </ul>
+</body>
+</html>
